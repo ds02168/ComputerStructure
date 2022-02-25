@@ -1,0 +1,21 @@
+[1]Direct
+1.	L1 캐시크기: 4, 8, 16, 32					./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:128:32:1:l -cache:dl1 dl1:128:32:1:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:256:32:1:l -cache:dl1 dl1:256:32:1:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:512:32:1:l -cache:dl1 dl1:512:32:1:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:1024:32:1:l -cache:dl1 dl1:1024:32:1:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+
+2.	L2 캐시크기: 8, 16, 32, 64 (L1:4)				./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:128:32:1:l -cache:il2 il2:256:32:1:l -cache:dl1 dl1:128:32:1:l -cache:dl2 dl2:256:32:1:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:128:32:1:l -cache:il2 il2:512:32:1:l -cache:dl1 dl1:128:32:1:l -cache:dl2 dl2:512:32:1:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:128:32:1:l -cache:il2 il2:1024:32:1:l -cache:dl1 dl1:128:32:1:l -cache:dl2 dl2:1024:32:1:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:128:32:1:l -cache:il2 il2:2048:32:1:l -cache:dl1 dl1:128:32:1:l -cache:dl2 dl2:2048:32:1:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+
+[2] SetAssociative 2-Way
+1.	L1 캐시크기: 4, 8, 16, 32					./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:64:32:2:l -cache:dl1 dl1:64:32:2:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:128:32:2:l -cache:dl1 dl1:128:32:2:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:256:32:2:l -cache:dl1 dl1:256:32:2:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:512:32:2:l -cache:dl1 dl1:512:32:2:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+
+2.	L2 캐시크기: 8, 16, 32, 64 (L1:4)				./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:64:32:2:l -cache:il2 il2:128:32:2:l -cache:dl1 dl1:64:32:2:l -cache:dl2 dl2:128:32:2:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:64:32:2:l -cache:il2 il2:256:32:2:l -cache:dl1 dl1:64:32:2:l -cache:dl2 dl2:256:32:2:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:64:32:2:l -cache:il2 il2:512:32:2:l -cache:dl1 dl1:64:32:2:l -cache:dl2 dl2:512:32:2:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
+								./$sim-cache -redir:sim cache.txt -max:inst 10000000 -cache:il1 il1:64:32:2:l -cache:il2 il2:1024:32:2:l -cache:dl1 dl1:64:32:2:l -cache:dl2 dl2:1024:32:2:l ../benchmark/equake/equake00.peak.ev6 ../benchmark/equake/inp.in 
